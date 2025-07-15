@@ -110,6 +110,23 @@ A complete, hands-on journey from beginner to expert in SailPoint IdentityIQ (II
 
 ---
 
+## 🛠️ How to Read & Use SailPoint JavaDocs
+
+📍 **URL**: [https://developer.sailpoint.com/docs/extensibility/rules/java-docs/](https://developer.sailpoint.com/docs/extensibility/rules/java-docs/)
+
+### 🔍 What to Look For:
+- **Classes**: `Identity`, `Link`, `Application`, `ProvisioningPlan`
+- **Methods**: `.getAttribute()`, `.getName()`, `.getNativeIdentity()`, etc.
+- **Inherited Objects**: What utilities are available in `RuleContext`?
+- **Return Types**: Know what type is expected when calling methods
+
+### ✍️ Suggested Practice:
+- Choose any Rule (e.g., `AttributeGeneratorRule`)
+- Look up related objects in the JavaDocs (e.g., `Identity`)
+- Print or log: all attributes, links, roles, etc.
+
+---
+
 ## 📦 Final Deliverables
 
 By the end of the course, you’ll have:
