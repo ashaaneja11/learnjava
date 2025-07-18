@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE sailpoint PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<sailpoint>
+  <Rule name="TestPrintAttributesReturn" type="IdentityAttribute">
+    <Description>Return all attributes of spadmin as a string</Description>
+    <Source><![CDATA[
+      import sailpoint.object.Identity;
+      import java.util.Iterator;
+      import java.util.Map;
+
+      Identity identity = context.getObject(Identity.class, "spadmin");
+
+      if (identity == null) {
+          return "Identity not found.";
+      }
+
+      Map attrs = identity.getAttributes();
+      Iterator keys = attrs.keySet().iterator();
+
+      String result = "Attributes for spadmin:\n";
+      while (keys.hasNext()) {
+          String key = (String) keys.next();
+          Object val = attrs.get(key);
+          result += key + " = " + val + "\n";
+      }
+
+      return result;
+    ]]></Source>
+  </Rule>
+</sailpoint>
