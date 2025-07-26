@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Rule PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Rule created="1752867153504" id="c0a80008981e188c81981f06266002dc" language="beanshell" name="TestPrintAttributesReturn" type="IdentityAttribute">
+  <Description>Return all attributes of spadmin as a string using for-loop</Description>
+  <Source>
+    import sailpoint.object.Identity;
+    import java.util.Map;
+    import java.util.Set;
+
+    Identity identity = context.getObject(Identity.class, "spadmin");
+
+    if (identity == null) {
+        return "Identity not found.";
+    }
+
+    Map attrs = identity.getAttributes();
+    Set keys = attrs.keySet();
+
+    String result = "Attributes for spadmin:\n";
+    for (Object keyObj : keys) {
+        String key = (String) keyObj;
+        Object val = attrs.get(key);
+        result += key + " = " + val + "\n";
+    }
+
+    return result;
+  </Source>
+</Rule>
