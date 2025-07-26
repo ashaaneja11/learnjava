@@ -1,9 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE sailpoint PUBLIC "sailpoint.dtd" "sailpoint.dtd">
-<sailpoint>
-  <Rule name="TestPrintAttributesReturn" type="IdentityAttribute">
-    <Description>Return all attributes of spadmin as a string</Description>
-    <Source><![CDATA[
+<!DOCTYPE Rule PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Rule created="1752867153504" id="c0a80008981e188c81981f06266002dc" language="beanshell" name="TestPrintAttributesReturn" type="IdentityAttribute">
+  <Description>Return all attributes of spadmin as a string</Description>
+  <Source>
       import sailpoint.object.Identity;
       import java.util.Iterator;
       import java.util.Map;
@@ -25,6 +24,5 @@
       }
 
       return result;
-    ]]></Source>
-  </Rule>
-</sailpoint>
+    </Source>
+</Rule>
